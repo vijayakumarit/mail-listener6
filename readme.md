@@ -1,11 +1,11 @@
 # Overview
 
-Mail-listener5 library for node.js. Get notification when new email arrived to inbox or when message metadata (e.g. flags) changes externally. Uses IMAP protocol.
+Mail-listener6 library for node.js. Get notification when new email arrived to inbox or when message metadata (e.g. flags) changes externally. Uses IMAP protocol.
 
 ## Version Notes
 THIS PACKAGE IS STILL UNDERGOING MORE THOROUGH TESTING AND IMPROVEMENT. Expect further commits as functionality is added. :-)
 
-This package has several improvements and fixes over the mail-listener2 & mail-listener4. Most of the improvements are designed to improve security & usability, plus avoid deprecation warnings. The previous mail-listener packages used a now-deprecated version of MailParser and unsafe buffer constructors (see change notes below).
+This package has several improvements and fixes over the mail-listener6. Most of the improvements are designed to improve security & usability, plus avoid deprecation warnings. The previous mail-listener packages used a now-deprecated version of MailParser and unsafe buffer constructors (see change notes below).
 
 This package uses the simpleParser function in NodeMailer. This parser is easier to implement & provides a Mail object from which any needed attributes can be extracted. However, it is more resource-intensive when it comes to larger emails, as attachments are not handled as streams, but rather are buffered in memory. In a future version, I plan to reintroduce the ability to stream attachments directly (rather than buffering them) so that larger attachments can be processed with fewer resources.
 
@@ -18,8 +18,6 @@ Change notes:
   - Updating test.js to use environment variables for credentials, etc (see new [Testing](#Testing) section below).
 
 We are using these libraries: [node-imap](https://github.com/mscdex/node-imap), [mailparser](https://github.com/andris9/mailparser).
-
-Heavily inspired by [mail-listener2](https://github.com/chirag04/mail-listener2) and [mail-listener5](https://github.com/Pranav-Dakshina/mail-listener2).
 
 NOTE: This version is designed to work with & tested on NodeJS v 10.15.2 LTS, the most recent LTS version as at March 2019. It might not work on older versions of Node.
 
