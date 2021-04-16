@@ -32,7 +32,7 @@ A future version will reintroduce this capability once the refactoring is comple
 
 Install
 
-`npm install mail-listener5`
+`npm install mail-listener6`
 
 
 JavaScript Code:
@@ -40,7 +40,7 @@ JavaScript Code:
 
 ```javascript
 
-var { MailListener } = require("mail-listener5");   // NOTE: A FUTURE VERSION (release date TBA) will not require ES6 destructuring or referring to the class after the require statement (i.e. require('mail-listener5').MailListener). At this stage, this is necessary because index.js exports the MailListener class as a property of module.exports.
+var { MailListener } = require("mail-listener6");   // NOTE: A FUTURE VERSION (release date TBA) will not require ES6 destructuring or referring to the class after the require statement (i.e. require('mail-listener6').MailListener). At this stage, this is necessary because index.js exports the MailListener class as a property of module.exports.
 
 var mailListener = new MailListener({
   username: "imap-username",
